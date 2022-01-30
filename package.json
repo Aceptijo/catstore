@@ -1,0 +1,16 @@
+{
+  "name": "catstore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d catstore"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://Aceptijo.io/catstore",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
