@@ -59,13 +59,6 @@ body .feature__item {
   height: calc(85rem / 2);
 }
 
-body .feature__title {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  min-height: calc(85rem / 8.5);
-}
-
 body .feature__description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,7 +661,7 @@ body .main__feature-title {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  min-height: calc(85rem / 8.5);
+  min-height: calc(85rem / 10);
 }
 
 body .main__feature-luck {
