@@ -3,17 +3,161 @@
 body
     background: $background-color
 
+    .wrapper
+        width: 100%
+        max-width: 85rem
+        box-sizing: border-box
+        padding: 0 1rem
+        margin: 0 auto
+
+    .feature
+        &__item
+            display: flex
+            flex-direction: column
+            width: calc(80rem / 2)
+            height: calc(85rem / 2)
+        &__description
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 2rem
+            font-size: 1.2rem
+            font-weight: 500
+            line-height: 1.4
+            color: $secondary-text-color
+
+    .logo
+        display: flex
+        cursor: pointer
+        &__text
+            display: flex
+            align-items: center
+            flex-direction: column
+            gap: 0.3rem
+            margin-left: 1rem
+        &__title
+            font-size: 2.8rem
+            font-weight: 600
+        &__subtitle
+            font-size: 0.9rem
+            font-weight: 500
+
+    .title
+        display: flex
+        align-items: center
+        justify-content: space-between
+        color: $secondary-text-color
+        margin-bottom: 2rem
+        a
+            color: $secondary-text-color
+        &__text
+            font-size: 2.55rem
+            font-weight: 600
+        &__more
+            display: flex
+            margin-right: 3rem
+            font-size: 1.25rem
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
+        &__icon
+            margin-left: 1rem
+
+    .row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 1.425rem
+
+    .card
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        gap: 2rem
+        width: calc(85rem / 2.8)
+        height: calc(85rem / 2.125)
+        border: 0.25rem solid $secondary-color
+        border-radius: 1.425rem
+        padding: 2rem
+        color: $secondary-text-color
+        &:hover
+            border: 0.25rem solid $primary-text-color
+        &__image
+            display: flex
+            justify-content: center
+            position: relative
+        &__img
+            height: calc(85rem / 5)
+        &__like
+            position: absolute
+            right: 0
+        &__description
+            display: flex
+            flex-direction: column
+            gap: 1.5rem
+        &__title
+            font-size: 1.75rem
+            font-weight: 500
+        &__text
+            height: calc(18rem / 4)
+            font-size: 1rem
+            line-height: 1.3
+        &__price
+            font-size: 1.75rem
+            &_new
+                font-weight: 700
+                margin-right: 2rem
+            &_old
+                font-weight: 500
+                text-decoration: line-through
+                color: $secondary-light-color
+        &__button
+            padding: 1rem 2rem
+            border-radius: 1.425rem
+            background: $secondary-color
+            transition: all 0.3s ease-out
+            &:hover
+                box-shadow: 0 0.01rem 0.3rem 0.025rem $primary-text-color
+                background: $primary-text-color
+                transition: all 0.3s ease-out
+                .card__button-text
+                    color: $primary-color
+                    transition: all 0.2s ease-out
+            &:active
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
+                background: $primary-color
+                transition: all 0.1s ease
+                .card__button-text
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
+        &__button-text
+            font-size: 1.25rem
+            font-weight: 500
+            color: $secondary-text-color
+
+    .line
+        display: flex
+        justify-content: space-between
+        height: 23rem
+        margin-top: 17.5rem
+        &::before
+            content: ''
+            width: 100%
+            height: inherit
+            display: block
+            position: absolute
+            left: 0
+            z-index: -1
+            background: $primary-text-color
+
     .header
         width: 100%
         position: fixed
         background: $primary-color
         z-index: 99
-        &__wrapper
-            width: 100%
-            max-width: 85rem
-            box-sizing: border-box
-            margin: 0 auto
-            padding: 0 1rem
         &__content
             display: flex
             align-items: center
@@ -28,49 +172,57 @@ body
             align-items: center
             gap: 1rem
             font-weight: 500
+            cursor: pointer
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__navbar
             margin-right: 4rem
         &__navbar-list
             display: flex
             gap: 2rem
+        &__navbar-item
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__phone
             display: flex
             align-items: center
             gap: 1rem
             font-weight: 500
+        &__phone-number
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__login
             display: flex
             align-items: center
             gap: 1rem
+            cursor: pointer
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
 
     .main
         padding-top: 6rem
-        &__wrapper
-            width: 100%
-            max-width: 85rem
-            box-sizing: border-box
-            padding: 0 1rem
-            margin: 0 auto
         &__section-top
             display: flex
             justify-content: space-between
             color: $secondary-text-color
             a
                 color: $secondary-text-color
-        &__logo
-            display: flex
-        &__logo-text
-            display: flex
-            align-items: center
-            flex-direction: column
-            gap: 0.3rem
-            margin-left: 1rem
-        &__logo-title
-            font-size: 2.8rem
-            font-weight: 600
-        &__logo-subtitle
-            font-size: 0.9rem
-            font-weight: 500
         &__search
             display: flex
             align-items: center
@@ -79,6 +231,11 @@ body
             padding: 0.7rem 2rem
             border: 0.25rem solid $secondary-color
             border-radius: 1.425rem
+            transition: all 1s linear
+            &:hover
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $secondary-text-color
+                border: 0.215rem solid $secondary-text-color
+                transition: all 0.5s ease-out
         &__search-icon
             margin-right: 1rem
         &__search-input
@@ -98,7 +255,15 @@ body
             align-items: center
             flex-direction: column
             gap: 0.2rem
-
+            cursor: pointer
+            &:hover
+                .main__action-item-text
+                    color: $animation-color
+                    transition: all 0.3s ease
+            &:active
+                .main__action-item-text
+                    color: $background-color
+                    transition: all 0.1s ease
         &__section-center
             margin-top: 3rem
         &__button
@@ -111,6 +276,14 @@ body
             font-weight: 500
             cursor: pointer
             color: $primary-text-color
+            transition: all 0.5s ease-out
+            &:hover
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $secondary-light-color
+                transition: all 0.5s ease-out
+            &:active
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
+                background: $primary-color
+                transition: all 0.1s ease
         &__button-burger
             margin-right: 1rem
         &__button-text
@@ -127,147 +300,55 @@ body
             height: 100%
             object-fit: cover
             object-position: top center
+            cursor: pointer
         &__dots
             margin-top: 3rem
         &__dots-list
             display: flex
             justify-content: center
+            li:hover
+                background: $primary-text-color
+                transition: all 0.3s ease
+            li:active
+                background: $primary-color
+                transition: all 0.1s ease
         &__dots-li
             height: 1.3rem
             width: 1.3rem
             border-radius: 50%
             margin: 0 1.5em
+            cursor: pointer
             background: $secondary-light-color
             &_active
                 height: 1.3rem
                 width: 1.3rem
                 border-radius: 50%
                 margin: 0 1.5em
+                cursor: pointer
                 background: $primary-text-color
 
         &__promotions
             padding-top: 17.5rem
-        &__promotions-title
-            display: flex
-            align-items: center
-            justify-content: space-between
-            margin-bottom: 2rem
-            color: $secondary-text-color
-            a
-                color: $secondary-text-color
-        &__promotions-title-text
-            font-size: 2.55rem
-            font-weight: 600
-        &__promotions-title-more
-            display: flex
-            margin-right: 3rem
-            font-size: 1.25rem
-        &__promotions-title-icon
-            margin-left: 1rem
+
         &__row
-            display: flex
-            align-items: center
-            justify-content: space-between
-            gap: 1.425rem
-        &__card
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            gap: 2rem
-            width: calc(85rem / 2.8)
-            height: calc(85rem / 2.125)
-            border: 0.25rem solid $secondary-color
-            border-radius: 1.425rem
-            padding: 2rem
-            color: $secondary-text-color
-            &:active
-                border: 0.25rem solid $primary-text-color
-        &__card-image
-            display: flex
-            justify-content: center
-            position: relative
-        &__card-img
-            height: calc(85rem / 5)
-        &__card-like
-            position: absolute
-            right: 0
-        &__card-description
-            display: flex
-            flex-direction: column
-            gap: 1.5rem
-        &__card-title
-            font-size: 1.75rem
-            font-weight: 500
-        &__card-text
-            height: calc(18rem / 4)
-            font-size: 1rem
-            line-height: 1.3
-        &__card-price
-            font-size: 1.75rem
-            &_new
-                font-weight: 700
-                margin-right: 2rem
-            &_old
-                font-weight: 500
-                text-decoration: line-through
-                color: $secondary-light-color
-        &__card-button
-            padding: 1rem 2rem
-            border-radius: 1.425rem
-            background: $secondary-color
-        &__card-button-text
-            font-size: 1.25rem
-            font-weight: 500
-            color: $secondary-text-color
-        
+
         &__news
             padding-top: 17.5rem
-        &__news-title
-            display: flex
-            align-items: center
-            justify-content: space-between
-            margin-bottom: 2rem
-            color: $secondary-text-color
-            a
-                color: $secondary-text-color
-        &__news-title-text
-            font-size: 2.55rem
-            font-weight: 600
-        &__news-title-more
-            display: flex
-            margin-right: 3rem
-            font-size: 1.25rem
-        &__news-title-icon
-            margin-left: 1rem
 
-        &__advice
-            display: flex
-            justify-content: space-between
-            height: 23rem
-            margin-top: 17.5rem
-            &::before
-                content: ''
-                width: 100%
-                height: inherit // наследуется от элемента выше
-                display: block
-                position: absolute
-                left: 0
-                z-index: -1
-                // background: $secondary-light-color
-                background: $primary-text-color
         &__advice-text
             display: flex
             flex-direction: column
             gap: 2rem
             width: calc(85rem / 1.7)
             padding: 4rem 0rem
-            // color: $primary-text-color
             color: $primary-color
             font-weight: 600
         &__advice-title
             font-size: 2.5rem
         &__advice-subtitle
             font-size: 1.25rem
+        &__advice-button
+            
         &__advice-btn
             padding: 1rem 6rem
             border-radius: 1.425rem
@@ -275,9 +356,19 @@ body
             font-weight: 500
             background: $secondary-color
             color: $secondary-text-color
-            // color: $primary-text-color
-            // color: $primary-text-color
-            // background: $primary-color
+            transition: all 0.3s ease-out
+            &:hover
+                box-shadow: 0 0.01rem 0.3rem 0.025rem $secondary-light-color
+                background: $secondary-light-color
+                transition: all 0.3s ease-out
+                color: $primary-color
+                transition: all 0.2s ease-out
+            &:active
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
+                background: $primary-color
+                transition: all 0.1s ease
+                color: $primary-text-color
+                transition: all 0.1s ease-out
         &__advice-image
             position: relative
         &__advice-img
@@ -286,38 +377,26 @@ body
             right: 0
         &__blog
             padding-top: 17.5rem
-        &__blog-title
-            display: flex
-            align-items: center
-            justify-content: space-between
-            margin-bottom: 2rem
-            color: $secondary-text-color
-            a
-                color: $secondary-text-color
-        &__blog-title-text
-            font-size: 2.55rem
-            font-weight: 600
-        &__blog-title-more
-            display: flex
-            margin-right: 3rem
-            font-size: 1.25rem
-        &__blog-title-icon
-            margin-left: 1rem   
         &__blog-row
             display: flex
             justify-content: space-between
-            a   
+            a
                 font-size: 1.25rem
                 color: $primary-text-color
         &__blog-card
             overflow: hidden
             width: calc(85rem / 2.1)
             height: calc(85rem / 1.7)
+            &:hover
+                .main__blog-card-description
+                    border: 0.25rem solid $primary-text-color
+                    border-top: none 
         &__blog-card-image
-            border-radius: 1.425rem 1.425rem 0rem 0rem 
+            border-radius: 1.425rem 1.425rem 0rem 0rem
             overflow: hidden
             width: calc(85rem / 2.1)
             height: calc(85rem / 2.5)
+            cursor: pointer
         &__blog-card-img
             width: 100%
             height: 100%
@@ -330,7 +409,8 @@ body
             padding: 2rem
             border: 0.25rem solid $secondary-color
             border-top: none
-            border-radius: 0rem 0rem 1.425rem 1.425rem 
+            border-radius: 0rem 0rem 1.425rem 1.425rem
+            
         &__blog-card-title
             font-size: 1.6rem
             font-weight: 600
@@ -340,83 +420,33 @@ body
             font-size: 1.2rem
             color: $secondary-text-color
             line-height: 1.2
-        
+
         &__brand
             padding-top: 17.5rem
         &__brand-title
-            display: flex
-            align-items: center
-            justify-content: space-between
             margin-bottom: 6rem
-            color: $secondary-text-color
-            a
-                color: $secondary-text-color
-        &__brand-title-text
-            font-size: 2.55rem
-            font-weight: 600
-        &__brand-title-more
-            display: flex
-            margin-right: 3rem
-            font-size: 1.25rem
-        &__brand-title-icon
-            margin-left: 1rem   
         &__brand-image
             display: flex
             align-items: start
             justify-content: space-between
         &__brand-image-item
             width: calc(85rem / 4.25)
-            
+            cursor: pointer
         &__feature-row
             display: flex
             justify-content: space-between
-
         &__feature-item
-            display: flex
-            flex-direction: column
-            width: calc(80rem / 2)
-            height: calc(85rem / 2)
         &__feature
             padding-top: 17.5rem
         &__feature-title
-            display: flex
             align-items: start
-            justify-content: space-between
-            min-height: calc(85rem / 8.5)
-            color: $secondary-text-color
-            a
-                color: $secondary-text-color
-        &__feature-title-text
-            font-size: 2.55rem
-            font-weight: 600
-        &__feature-description
-            display: flex
-            flex-direction: column
-            justify-content: space-between
-            gap: 2rem
-            font-size: 1.2rem
-            font-weight: 500
-            line-height: 1.4
-            color: $secondary-text-color
+            min-height: calc(85rem / 10)
         &__feature-luck
             font-size: 1.2rem
             font-weight: 600
             color: $secondary-text-color
-
         &__subscribe
-            display: flex
-            justify-content: space-between
             height: 19rem
-            margin-top: 17.5rem
-            &::before
-                content: ''
-                width: 100%
-                height: inherit // наследуется от элемента выше
-                display: block
-                position: absolute
-                left: 0
-                z-index: -1
-                background: $primary-text-color
         &__subscribe-text
             display: flex
             flex-direction: column
@@ -433,10 +463,9 @@ body
         &__subscribe-input
             position: absolute
             bottom: 0
-            width: calc(85rem / 2)
+            width: calc(85rem / 1.7)
             padding: 1rem 2rem
             border-radius: 1.425rem
-            // background: $primary-text-color
             font-size: 1.25rem
             color: $primary-color
         &__subscribe-btn
@@ -449,24 +478,27 @@ body
             font-weight: 500
             background: $secondary-color
             color: $secondary-text-color
-            // color: $primary-text-color
-            // background: $primary-color
+            &:hover
+                box-shadow: 0 0.01rem 0.3rem 0.025rem $secondary-light-color
+                background: $secondary-light-color
+                transition: all 0.3s ease-out
+                color: $primary-color
+                transition: all 0.2s ease-out
+            &:active
+                box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
+                background: $primary-color
+                transition: all 0.1s ease
+                color: $primary-text-color
+                transition: all 0.1s ease-out
         &__subscribe-image
             position: relative
         &__subscribe-img
             position: absolute
             bottom: 0
 
-
     .footer
         background: $secondary-color
         padding: 6rem 0rem
-        &__wrapper
-            width: 100%
-            max-width: 85rem
-            box-sizing: border-box
-            padding: 0 1rem
-            margin: 0 auto
         &__content
             display: flex
             justify-content: space-between
@@ -474,20 +506,7 @@ body
             a
                 color: $secondary-text-color
         &__logo
-            display: flex
             align-items: start
-        &__logo-text
-            display: flex
-            align-items: center
-            flex-direction: column
-            gap: 0.3rem
-            margin-left: 1rem
-        &__logo-title
-            font-size: 2.8rem
-            font-weight: 600
-        &__logo-subtitle
-            font-size: 0.9rem
-            font-weight: 500
         &__catalog
             display: flex
             flex-direction: column
@@ -499,6 +518,13 @@ body
             display: flex
             flex-direction: column
             gap: 1.3rem
+        &__catalog-li
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__company
             display: flex
             flex-direction: column
@@ -510,6 +536,13 @@ body
             display: flex
             flex-direction: column
             gap: 1.3rem
+        &__company-li
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__contacts
             display: flex
             flex-direction: column
@@ -521,6 +554,12 @@ body
         &__phone-number
             font-size: 1.425rem
             font-weight: 600
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__phone-text
             font-size: 1.25rem
         &__socials
@@ -529,8 +568,12 @@ body
             align-items: start
             gap: 1.3rem
             font-size: 1.25rem
+        &__socials-email
+            &:hover
+                color: $animation-color
+                transition: all 0.3s ease
+            &:active
+                color: $background-color
+                transition: all 0.1s ease
         &__socials-icon
             margin-right: 1rem
-
-            
-        
