@@ -266,6 +266,15 @@ body
                     transition: all 0.1s ease
         &__section-center
             margin-top: 3rem
+        &__button-list
+            display: none
+            position: absolute
+            overflow: hidden
+            top: 100%
+            right: 0
+            width: calc(85rem / 3.9)
+            font-size: 1.5rem
+            font-weight: 500
         &__button
             display: flex
             align-items: center
@@ -275,20 +284,59 @@ body
             font-size: 1.5rem
             font-weight: 500
             cursor: pointer
+            position: relative
             color: $primary-text-color
             transition: all 0.5s ease-out
             &:hover
                 box-shadow: 0 0.01rem 0.5rem 0.025rem $secondary-light-color
+                border-radius: 1.425rem 1.425rem 0rem 0rem
                 transition: all 0.5s ease-out
             &:active
                 box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
                 background: $primary-color
                 transition: all 0.1s ease
+            &:hover
+                .main__button-list
+                    display: inline
+                    
+        &__button-item
+            display: flex
+            justify-content: space-between
+            background: $secondary-color
+            // border-top: 0.1rem solid $secondary-light-color
+            // border-right: 0.25rem solid $secondary-light-color
+            // border-left: 0.25rem solid $secondary-light-color
+            // border-bottom: 0.1rem solid $secondary-light-color
+            transition: all 0.3s ease-out
+            &:hover
+                background: $primary-text-color
+                transition: all 0.3s ease-out
+                .main__button-item-text
+                    color: $primary-color
+                    transition: all 0.2s ease-out
+            &:active
+                background: $primary-color
+                transition: all 0.1s ease
+                .main__button-item-text
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
+            &_top
+                // border-top: 0.20rem solid $secondary-light-color
+            &_bottom
+                // border-bottom: 0.25rem solid $secondary-light-color
+                border-radius: 0rem 0rem 1.425rem 1.425rem
+        &__button-item-text
+            padding: 1.4rem
+            font-size: 1.4rem
+            font-weight: 500
+            color: $primary-text-color
+        &__button-item-icon
+            margin-right: 1.4rem
+
         &__button-burger
             margin-right: 1rem
         &__button-text
             margin-right: 4rem
-
         &__section-bottom
             margin-top: 3rem
         &__slider
