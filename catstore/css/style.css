@@ -551,7 +551,7 @@ body .main__button-list {
   overflow: hidden;
   top: 100%;
   right: 0;
-  width: calc(85rem / 3.9);
+  width: calc(85rem / 3.91);
   font-size: 1.5rem;
   font-weight: 500;
 }
