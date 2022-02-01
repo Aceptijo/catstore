@@ -266,15 +266,61 @@ body
                     transition: all 0.1s ease
         &__section-center
             margin-top: 3rem
+
         &__button-list
             display: none
             position: absolute
-            overflow: hidden
+            left: 0
             top: 100%
-            right: 0
-            width: calc(85rem / 3.91)
-            font-size: 1.5rem
-            font-weight: 500
+            width: calc(85rem / 3.92)
+        &__button-item
+            display: flex
+            justify-content: space-between
+            background: $secondary-color
+            transition: all 0.3s ease-out
+            &:hover
+                background: $primary-text-color
+                transition: all 0.3s ease-out
+                .main__button-item-text
+                    color: $primary-color
+                    transition: all 0.2s ease-out
+            &:active
+                background: $primary-color
+                transition: all 0.1s ease
+                .main__button-item-text
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
+            &:hover > .main__button-list-next
+                    display: block
+            &_bottom
+                border-radius: 0rem 0rem 0rem 1.425rem
+        &__button-list-next
+            display: none
+            position: absolute
+            left: 100%
+            top: 0
+            width: calc(85rem / 3.92)
+            overflow: hidden
+        &__button-item-next
+            display: flex
+            justify-content: space-between
+            position: relative
+            background: $primary-text-color
+            transition: all 0.3s ease-out
+            &:hover
+                background: $secondary-color
+                transition: all 0.2s ease-out
+                .main__button-item-text-next
+                    color: $primary-text-color
+                    transition: all 0.2s ease-out
+            &:active
+                background: $background-color
+                transition: all 0.1s ease
+                .main__button-item-text-next
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
+            &_bottom
+                border-radius: 0rem 0rem 0rem 1.425rem
         &__button
             display: flex
             align-items: center
@@ -291,48 +337,35 @@ body
                 box-shadow: 0 0.01rem 0.5rem 0.025rem $secondary-light-color
                 border-radius: 1.425rem 1.425rem 0rem 0rem
                 transition: all 0.5s ease-out
-            &:active
-                box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
-                background: $primary-color
-                transition: all 0.1s ease
+            // &:active
+            //     box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
+            //     background: $primary-color
+            //     transition: all 0.1s ease
             &:hover
                 .main__button-list
                     display: inline
-                    
-        &__button-item
-            display: flex
-            justify-content: space-between
-            background: $secondary-color
-            // border-top: 0.1rem solid $secondary-light-color
-            // border-right: 0.25rem solid $secondary-light-color
-            // border-left: 0.25rem solid $secondary-light-color
-            // border-bottom: 0.1rem solid $secondary-light-color
-            transition: all 0.3s ease-out
-            &:hover
-                background: $primary-text-color
-                transition: all 0.3s ease-out
-                .main__button-item-text
-                    color: $primary-color
-                    transition: all 0.2s ease-out
-            &:active
-                background: $primary-color
-                transition: all 0.1s ease
-                .main__button-item-text
-                    color: $primary-text-color
-                    transition: all 0.1s ease-out
-            &_top
-                // border-top: 0.20rem solid $secondary-light-color
-            &_bottom
-                // border-bottom: 0.25rem solid $secondary-light-color
-                border-radius: 0rem 0rem 1.425rem 1.425rem
         &__button-item-text
+            text-align: left
             padding: 1.4rem
             font-size: 1.4rem
             font-weight: 500
             color: $primary-text-color
+        &__button-item-text-next
+            text-align: left
+            padding: 1.4rem
+            font-size: 1.4rem
+            font-weight: 500
+            color: $secondary-color
+        &__button-item-title
+            display: flex
+            background: $primary-text-color
+            text-align: left
+            padding: 1.4rem
+            font-size: 1.4rem
+            font-weight: 700
+            color: $secondary-color
         &__button-item-icon
             margin-right: 1.4rem
-
         &__button-burger
             margin-right: 1rem
         &__button-text
