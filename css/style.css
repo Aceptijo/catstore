@@ -210,6 +210,11 @@ body .card__img {
 body .card__like {
   position: absolute;
   right: 0;
+  cursor: pointer;
+}
+
+body .card__like:active {
+  background: url("../img/icon_like_full.svg");
 }
 
 body .card__description {
@@ -546,7 +551,6 @@ body .main__section-center {
 }
 
 body .main__button-list {
-  display: none;
   position: absolute;
   left: 0;
   top: 100%;
@@ -589,24 +593,96 @@ body .main__button-item:active .main__button-item-text {
   transition: all 0.1s ease-out;
 }
 
-body .main__button-item:hover > .main__button-list-next {
+body .main__button-item:hover > .main__button-list-first {
   display: block;
 }
 
-body .main__button-item_bottom {
+body .main__button-item:hover > .main__button-list-second {
+  display: block;
+}
+
+body .main__button-item:hover > .main__button-list-third {
+  display: block;
+}
+
+body .main__button-item_pharmacy {
   border-radius: 0rem 0rem 0rem 1.425rem;
 }
 
-body .main__button-list-next {
+body .main__button-item_pharmacy:hover {
+  border-radius: 0rem 0rem 1.425rem 1.425rem;
+}
+
+body .main__button-item_dog:hover .main__button-list-first {
+  top: 16.5%;
+}
+
+body .main__button-item_dog:hover .main__button-list-second {
+  top: 16.5%;
+}
+
+body .main__button-item_dog:hover .main__button-list-third {
+  top: 16.5%;
+}
+
+body .main__button-item_rodent:hover .main__button-list-first {
+  top: 33.35%;
+  height: calc(85rem / 2.95);
+}
+
+body .main__button-item_rodent:hover .main__button-list-second {
+  top: 33.35%;
+  height: calc(85rem / 2.95);
+}
+
+body .main__button-item_rodent:hover .main__button-list-third {
+  top: 33.35%;
+  height: calc(85rem / 2.95);
+}
+
+body .main__button-item_fish:hover .main__button-list-first {
+  top: 50%;
+  height: calc(85rem / 4.3);
+}
+
+body .main__button-item_fish:hover .main__button-list-second {
+  top: 50%;
+  height: calc(85rem / 4.3);
+}
+
+body .main__button-item_fish:hover .main__button-list-third {
+  top: 50%;
+  height: calc(85rem / 4.3);
+}
+
+body .main__button-item_bird:hover .main__button-list-first {
+  top: 66.7%;
+  height: calc(85rem / 3.77);
+}
+
+body .main__button-item_bird:hover .main__button-list-second {
+  top: 66.7%;
+  height: calc(85rem / 3.77);
+}
+
+body .main__button-item_bird:hover .main__button-list-third {
+  top: 66.7%;
+  height: calc(85rem / 3.77);
+}
+
+body .main__button-list-first {
   display: none;
   position: absolute;
   left: 100%;
   top: 0;
   width: calc(85rem / 3.92);
+  height: calc(85rem / 2.552);
+  background: #c9d1d9;
+  border-radius: 0rem 0rem 0rem 1.425rem;
   overflow: hidden;
 }
 
-body .main__button-item-next {
+body .main__button-item-first {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,32 +695,129 @@ body .main__button-item-next {
   transition: all 0.3s ease-out;
 }
 
-body .main__button-item-next:hover {
+body .main__button-item-first:hover {
   background: #282e33;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
-body .main__button-item-next:hover .main__button-item-text-next {
+body .main__button-item-first:hover .main__button-item-text-first {
   color: #c9d1d9;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
-body .main__button-item-next:active {
+body .main__button-item-first:active {
   background: #0d1117;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 
-body .main__button-item-next:active .main__button-item-text-next {
+body .main__button-item-first:active .main__button-item-text-first {
   color: #c9d1d9;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-body .main__button-item-next_bottom {
+body .main__button-item-first_bottom {
   border-radius: 0rem 0rem 0rem 1.425rem;
+}
+
+body .main__button-list-second {
+  display: none;
+  position: absolute;
+  left: 200%;
+  top: 0;
+  width: calc(85rem / 3.92);
+  height: calc(85rem / 2.552);
+  background: #c9d1d9;
+  overflow: hidden;
+}
+
+body .main__button-item-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  background: #c9d1d9;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+body .main__button-item-second:hover {
+  background: #282e33;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body .main__button-item-second:hover .main__button-item-text-second {
+  color: #c9d1d9;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body .main__button-item-second:active {
+  background: #0d1117;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+body .main__button-item-second:active .main__button-item-text-second {
+  color: #c9d1d9;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+body .main__button-list-third {
+  display: none;
+  position: absolute;
+  left: 300%;
+  top: 0;
+  width: calc(85rem / 3.92);
+  height: calc(85rem / 2.552);
+  border-radius: 0rem 1.425rem 1.425rem 0rem;
+  background: #c9d1d9;
+  overflow: hidden;
+}
+
+body .main__button-item-third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  background: #c9d1d9;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+body .main__button-item-third:hover {
+  background: #282e33;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body .main__button-item-third:hover .main__button-item-text-third {
+  color: #c9d1d9;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+body .main__button-item-third:active {
+  background: #0d1117;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+body .main__button-item-third:active .main__button-item-text-third {
+  color: #c9d1d9;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 
 body .main__button {
@@ -686,7 +859,23 @@ body .main__button-item-text {
   color: #c9d1d9;
 }
 
-body .main__button-item-text-next {
+body .main__button-item-text-first {
+  text-align: left;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #282e33;
+}
+
+body .main__button-item-text-second {
+  text-align: left;
+  padding: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #282e33;
+}
+
+body .main__button-item-text-third {
   text-align: left;
   padding: 1.4rem;
   font-size: 1.4rem;
