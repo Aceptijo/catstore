@@ -551,6 +551,7 @@ body .main__section-center {
 }
 
 body .main__button-list {
+  display: none;
   position: absolute;
   left: 0;
   top: 100%;
