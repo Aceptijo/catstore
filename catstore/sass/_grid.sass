@@ -72,6 +72,7 @@ body
         justify-content: space-between
         gap: 1.425rem
 
+    
     .card
         display: flex
         flex-direction: column
@@ -94,6 +95,9 @@ body
         &__like
             position: absolute
             right: 0
+            cursor: pointer
+            &:active
+                background: url('../img/icon_like_full.svg')
         &__description
             display: flex
             flex-direction: column
@@ -268,7 +272,7 @@ body
             margin-top: 3rem
 
         &__button-list
-            display: none
+            // display: none
             position: absolute
             left: 0
             top: 100%
@@ -290,18 +294,64 @@ body
                 .main__button-item-text
                     color: $primary-text-color
                     transition: all 0.1s ease-out
-            &:hover > .main__button-list-next
+            &:hover > .main__button-list-first
                     display: block
-            &_bottom
+            &:hover > .main__button-list-second
+                    display: block
+            &:hover > .main__button-list-third
+                    display: block
+            &_pharmacy
                 border-radius: 0rem 0rem 0rem 1.425rem
-        &__button-list-next
+                &:hover
+                    border-radius: 0rem 0rem 1.425rem 1.425rem
+            &_dog:hover
+                .main__button-list-first
+                    top: 16.5%
+                .main__button-list-second
+                    top: 16.5%
+                .main__button-list-third
+                    top: 16.5%
+            &_rodent:hover
+                .main__button-list-first
+                    top: 33.35%
+                    height: calc(85rem / 2.95)
+                .main__button-list-second
+                    top: 33.35%
+                    height: calc(85rem / 2.95)
+                .main__button-list-third
+                    top: 33.35%
+                    height: calc(85rem / 2.95)
+            &_fish:hover
+                .main__button-list-first
+                    top: 50%
+                    height: calc(85rem / 4.3)
+                .main__button-list-second
+                    top: 50%
+                    height: calc(85rem / 4.3)
+                .main__button-list-third
+                    top: 50%
+                    height: calc(85rem / 4.3)
+            &_bird:hover
+                .main__button-list-first
+                    top: 66.7%
+                    height: calc(85rem / 3.77)
+                .main__button-list-second
+                    top: 66.7%
+                    height: calc(85rem / 3.77)
+                .main__button-list-third
+                    top: 66.7%
+                    height: calc(85rem / 3.77)
+        &__button-list-first
             display: none
             position: absolute
             left: 100%
             top: 0
             width: calc(85rem / 3.92)
+            height: calc(85rem / 2.552)
+            background: $primary-text-color
+            border-radius: 0rem 0rem 0rem 1.425rem
             overflow: hidden
-        &__button-item-next
+        &__button-item-first
             display: flex
             justify-content: space-between
             position: relative
@@ -310,17 +360,72 @@ body
             &:hover
                 background: $secondary-color
                 transition: all 0.2s ease-out
-                .main__button-item-text-next
+                .main__button-item-text-first
                     color: $primary-text-color
                     transition: all 0.2s ease-out
             &:active
                 background: $background-color
                 transition: all 0.1s ease
-                .main__button-item-text-next
+                .main__button-item-text-first
                     color: $primary-text-color
                     transition: all 0.1s ease-out
             &_bottom
                 border-radius: 0rem 0rem 0rem 1.425rem
+        &__button-list-second
+            display: none
+            position: absolute
+            left: 200%
+            top: 0
+            width: calc(85rem / 3.92)
+            height: calc(85rem / 2.552)
+            background: $primary-text-color
+            overflow: hidden
+        &__button-item-second
+            display: flex
+            justify-content: space-between
+            position: relative
+            background: $primary-text-color
+            transition: all 0.3s ease-out
+            &:hover
+                background: $secondary-color
+                transition: all 0.2s ease-out
+                .main__button-item-text-second
+                    color: $primary-text-color
+                    transition: all 0.2s ease-out
+            &:active
+                background: $background-color
+                transition: all 0.1s ease
+                .main__button-item-text-second
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
+        &__button-list-third
+            display: none
+            position: absolute
+            left: 300%
+            top: 0
+            width: calc(85rem / 3.92)
+            height: calc(85rem / 2.552)
+            border-radius: 0rem 1.425rem 1.425rem 0rem
+            background: $primary-text-color
+            overflow: hidden
+        &__button-item-third
+            display: flex
+            justify-content: space-between
+            position: relative
+            background: $primary-text-color
+            transition: all 0.3s ease-out
+            &:hover
+                background: $secondary-color
+                transition: all 0.2s ease-out
+                .main__button-item-text-third
+                    color: $primary-text-color
+                    transition: all 0.2s ease-out
+            &:active
+                background: $background-color
+                transition: all 0.1s ease
+                .main__button-item-text-third
+                    color: $primary-text-color
+                    transition: all 0.1s ease-out
         &__button
             display: flex
             align-items: center
@@ -337,10 +442,6 @@ body
                 box-shadow: 0 0.01rem 0.5rem 0.025rem $secondary-light-color
                 border-radius: 1.425rem 1.425rem 0rem 0rem
                 transition: all 0.5s ease-out
-            // &:active
-            //     box-shadow: 0 0.01rem 0.5rem 0.025rem $primary-color
-            //     background: $primary-color
-            //     transition: all 0.1s ease
             &:hover
                 .main__button-list
                     display: inline
@@ -350,7 +451,19 @@ body
             font-size: 1.4rem
             font-weight: 500
             color: $primary-text-color
-        &__button-item-text-next
+        &__button-item-text-first
+            text-align: left
+            padding: 1.4rem
+            font-size: 1.4rem
+            font-weight: 500
+            color: $secondary-color
+        &__button-item-text-second
+            text-align: left
+            padding: 1.4rem
+            font-size: 1.4rem
+            font-weight: 500
+            color: $secondary-color
+        &__button-item-text-third
             text-align: left
             padding: 1.4rem
             font-size: 1.4rem
