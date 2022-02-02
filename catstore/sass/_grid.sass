@@ -918,27 +918,37 @@ body
                 display: none
             &__blog
                 padding-top: 5rem
-            &__blog-row
-                flex-direction: column
-                gap: 2rem
             &__blog-card
                 width: 100%
+            &__blog-row
+                display: flex
+                flex-wrap: nowrap
+                overflow-x: auto
+                gap: 2rem
+                &::-webkit-scrollbar 
+                    display: none
+            &__blog-card
+                overflow: hidden
+                width: 100%
+                flex: 0 0 auto
             &__blog-card-description
                 gap: 1rem
                 padding: 1rem
             &__blog-card-text
-                height: 20%
+                height: 10rem
             &__brand
                 padding-top: 5rem
             &__brand-title
                 margin-bottom: 2rem
             &__brand-image
                 display: flex
-                flex-wrap: wrap
-                justify-content: center
+                flex-wrap: nowrap
+                overflow-x: auto
                 gap: 3rem
+                &::-webkit-scrollbar 
+                    display: none
             &__brand-image-item
-                width: 100%
+                flex: 0 0 auto
             &__feature-row
                 display: flex
                 flex-direction: column
@@ -1041,11 +1051,14 @@ body
 
         .row
             display: flex
-            flex-wrap: wrap
-            align-items: center
-            justify-content: center
-
-
+            flex-wrap: nowrap
+            overflow-x: auto
+            &::-webkit-scrollbar 
+                display: none
+        .card
+            display: flex
+            flex: 0 0 auto
+            width: 100%
     @media (max-width: 400px)
         .header
             &__title
