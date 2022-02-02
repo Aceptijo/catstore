@@ -525,7 +525,8 @@ body
                 margin: 0 1.5em
                 cursor: pointer
                 background: $primary-text-color
-
+        &__mobile-catalog
+            display: none
         &__promotions
             padding-top: 17.5rem
 
@@ -892,6 +893,10 @@ body
                     height: 0.8rem
                     width: 0.8rem
                     margin: 0 2.5%
+            &__mobile-catalog
+                display: block
+                padding-top: 3rem
+
             &__section-bottom
                 margin-top: 2rem
             &__promotions
@@ -964,8 +969,30 @@ body
             &__subscribe-btn
                 font-size: 0.8rem
                 padding: 1rem 2rem
-            
-
+        
+        .mobile
+            &__row
+                display: flex
+                justify-content: space-between
+                margin-bottom: 1rem
+            &__card
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                gap: 1rem
+                padding: 2rem 2rem
+                border: 0.25rem solid #282e33;
+                border-radius: 1.425rem;
+                background: $background-color
+                width: 48%
+            &__card-image
+                width: 70%
+                background: $background-color
+            &__card-text
+                font-size: 1.4rem
+                font-weight: 600
+                color: $primary-text-color
         .title
             justify-content: space-between
             align-items: center
