@@ -1562,7 +1562,7 @@ body .footer__socials-icon {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   body .header__search-img {
     height: 2rem;
@@ -1866,6 +1866,12 @@ body .footer__socials-icon {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  body .header__title {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
