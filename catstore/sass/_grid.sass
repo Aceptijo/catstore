@@ -172,6 +172,10 @@ body
                 color: $secondary-text-color
         &__hamburger
             display: none
+        &__logo
+            display: none
+        &__icons
+            display: none
         &__map
             display: flex
             align-items: center
@@ -786,7 +790,6 @@ body
             &__hamburger
                 display: block
                 background: $primary-color
-                margin-left: 1rem
             &__map
                 display: none
             &__navbar
@@ -807,7 +810,20 @@ body
         .wrapper
             width: 100%
             padding: 0 1rem
-
+        .logo
+            display: flex
+            align-items: center
+            gap: 1rem
+            &__title
+                font-size: 1.7rem
+                font-weight: 600
+            &__text
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                flex-direction: column
+                margin-left: 0rem
+            
         .header
             width: 100%
             position: fixed
@@ -816,9 +832,25 @@ body
             &__hamburger
                 display: block
                 background: $primary-color
-                margin-left: 1rem
+            &__logo
+                margin-left: 1.5rem
+                display: flex
+                flex: 1
             &__content
-                min-height: 5rem
+                min-height: 4.5rem
+                justify-content: flex-start
+            &__logo-image
+                height: 2rem
+                width: 2rem
+            &__icons
+                display: flex
+                justify-content: flex-end
+                align-items: center
+                gap: 0.5rem
+            &__search-img
+                height: 2rem
+                width: 2rem
+                background: $primary-color           
             &__map
                 display: none
             &__navbar
@@ -827,16 +859,23 @@ body
                 display: none
             &__phone
                 display: none
-            &__login
-                display: none
+            
                 
         .feature
             &__item
                 width: 100%
-                height: calc(85rem / 2.25)
-                
+                height: 100%
+            &__description
+                font-size: 1rem
+
         .main
+            &__logo
+                display: none
+            &__section-center
+                display: none
             &__search
+                display: none
+            &__action
                 display: none
             &__slider
                 border-radius: 1.425rem
@@ -845,8 +884,16 @@ body
                 height: calc(85rem / 4.4)
             &__slider-image
                 max-width: 100%
-            &__dots
-                display: none
+            &__dots-li
+                height: 0.8rem
+                width: 0.8rem
+                margin: 0 2.5%
+                &_active
+                    height: 0.8rem
+                    width: 0.8rem
+                    margin: 0 2.5%
+            &__section-bottom
+                margin-top: 2rem
             &__promotions
                 padding-top: 5rem
             &__news
@@ -854,30 +901,45 @@ body
             &__advice-text
                 text-align: center
                 justify-content: space-between
-                padding: 3rem 0rem
+                padding: 2rem 0rem
             &__advice-title
                 font-size: 2rem
             &__advice-subtitle
                 font-size: 1.2rem
             &__advice-btn
-                padding: 1rem 8rem
+                width: 100%
+                padding: 1rem 0
             &__advice-image
                 display: none
             &__blog
                 padding-top: 5rem
-            &__action
-                display: none
+            &__blog-row
+                flex-direction: column
+                gap: 2rem
+            &__blog-card
+                width: 100%
+            &__blog-card-description
+                gap: 1rem
+                padding: 1rem
+            &__blog-card-text
+                height: 20%
+            &__brand
+                padding-top: 5rem
+            &__brand-title
+                margin-bottom: 2rem
             &__brand-image
                 display: flex
                 flex-wrap: wrap
                 justify-content: center
-                gap: 5rem
+                gap: 3rem
             &__brand-image-item
-                width: 32rem
+                width: 100%
             &__feature-row
                 display: flex
                 flex-direction: column
                 justify-content: space-between
+                gap: 6rem
+                margin-bottom: 2rem
             &__feature
                 padding-top: 5rem
             &__feature-title
@@ -890,29 +952,25 @@ body
             &__subscribe-image
                 display: none
             &__subscribe
-                height: 15rem
+                height: 13rem
             &__subscribe-text
                 padding: 2rem 0rem
             &__subscribe-title
                 text-align: center
-                font-size: 2rem
+                font-size: 1.5rem
             &__subscribe-input
+                font-size: 0.8rem
                 width: 100%
             &__subscribe-btn
-                padding: 1rem 3rem
-            &__blog-row
-                flex-direction: column
-                gap: 2rem
-            &__blog-card
-                width: 100%
-            &__brand
-                padding-top: 5rem
+                font-size: 0.8rem
+                padding: 1rem 2rem
             
 
         .title
             justify-content: space-between
+            align-items: center
             &__text
-                font-size: 2rem
+                font-size: 1.7rem
             &__more
                 margin-right: 0rem
                 font-size: 1rem
@@ -924,11 +982,40 @@ body
             margin-top: 8rem
 
 
+        
         .footer
+            background: $secondary-color
+            padding: 2rem 0rem
+            &__image
+                width: 48px
+                height: 48px
+            &__title
+                font-size: 2.5rem
+            &__subtitle
+                font-size: 0.8rem
             &__content
                 display: flex
                 flex-direction: column
-
+            &__logo
+                align-items: start
+            &__catalog
+                padding-top: 4rem
+            &__catalog-list
+                font-size: 1rem
+            &__company
+                padding-top: 4rem
+            &__company-list
+                font-size: 1rem
+            &__contacts
+                padding-top: 4rem
+            &__phone-number
+                font-size: 1.4rem
+            &__phone-text
+                font-size: 1rem
+            &__socials
+                padding-top: 4rem
+                font-size: 1rem
+            
 
         .row
             display: flex
