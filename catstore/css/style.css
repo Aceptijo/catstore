@@ -1595,7 +1595,7 @@ body .footer__socials-icon {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    min-height: calc(85rem / 15);
+    min-height: calc(85rem / 35);
   }
   body .main__feature-luck {
     font-size: 1.2rem;
@@ -1609,7 +1609,7 @@ body .footer__socials-icon {
     height: 15rem;
   }
   body .main__subscribe-text {
-    padding: 3rem 0rem;
+    padding: 2rem 0rem;
   }
   body .main__subscribe-title {
     text-align: center;
@@ -1650,7 +1650,7 @@ body .footer__socials-icon {
     margin-left: 1rem;
   }
   body .line {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
   body .footer__content {
     display: -webkit-box;
