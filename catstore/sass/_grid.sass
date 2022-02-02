@@ -5,7 +5,7 @@ body
 
     .wrapper
         width: 100%
-        max-width: 85rem
+        max-width: 1200px
         box-sizing: border-box
         padding: 0 1rem
         margin: 0 auto
@@ -72,7 +72,6 @@ body
         justify-content: space-between
         gap: 1.425rem
 
-    
     .card
         display: flex
         flex-direction: column
@@ -171,6 +170,8 @@ body
             color: $secondary-text-color
             a
                 color: $secondary-text-color
+        &__hamburger
+            display: none
         &__map
             display: flex
             align-items: center
@@ -295,11 +296,11 @@ body
                     color: $primary-text-color
                     transition: all 0.1s ease-out
             &:hover > .main__button-list-first
-                    display: block
+                display: block
             &:hover > .main__button-list-second
-                    display: block
+                display: block
             &:hover > .main__button-list-third
-                    display: block
+                display: block
             &_pharmacy
                 border-radius: 0rem 0rem 0rem 1.425rem
                 &:hover
@@ -542,7 +543,7 @@ body
         &__advice-subtitle
             font-size: 1.25rem
         &__advice-button
-            
+
         &__advice-btn
             padding: 1rem 6rem
             border-radius: 1.425rem
@@ -579,21 +580,18 @@ body
                 color: $primary-text-color
         &__blog-card
             overflow: hidden
-            width: calc(85rem / 2.1)
-            height: calc(85rem / 1.7)
+            width: 49%
             &:hover
                 .main__blog-card-description
                     border: 0.25rem solid $primary-text-color
-                    border-top: none 
+                    border-top: none
         &__blog-card-image
             border-radius: 1.425rem 1.425rem 0rem 0rem
             overflow: hidden
-            width: calc(85rem / 2.1)
-            height: calc(85rem / 2.5)
+            max-width: 100%
             cursor: pointer
         &__blog-card-img
-            width: 100%
-            height: 100%
+            max-width: 100%
             object-fit: cover
         &__blog-card-description
             display: flex
@@ -604,7 +602,6 @@ body
             border: 0.25rem solid $secondary-color
             border-top: none
             border-radius: 0rem 0rem 1.425rem 1.425rem
-            
         &__blog-card-title
             font-size: 1.6rem
             font-weight: 600
@@ -771,3 +768,171 @@ body
                 transition: all 0.1s ease
         &__socials-icon
             margin-right: 1rem
+
+    @media (max-width: 1200px)
+        .wrapper
+            width: 1140px
+
+    @media (max-width: 1199px)
+        .wrapper
+            width: 960px
+
+    @media (max-width: 991px)
+        .wrapper
+            width: 720px
+
+        
+        .header
+            &__hamburger
+                display: block
+                background: $primary-color
+                margin-left: 1rem
+            &__map
+                display: none
+            &__navbar
+                display: none
+            &__navbar-list
+                display: none
+            &__phone
+                display: none
+            &__login
+                display: none
+
+    @media (max-width: 767px)
+        .wrapper
+            width: 540px
+        
+
+    @media (max-width: 575px)
+        .wrapper
+            width: 100%
+            padding: 0 1rem
+
+        .header
+            width: 100%
+            position: fixed
+            background: $primary-color
+            z-index: 99
+            &__hamburger
+                display: block
+                background: $primary-color
+                margin-left: 1rem
+            &__content
+                min-height: 5rem
+            &__map
+                display: none
+            &__navbar
+                display: none
+            &__navbar-list
+                display: none
+            &__phone
+                display: none
+            &__login
+                display: none
+                
+        .feature
+            &__item
+                width: 100%
+                height: calc(85rem / 2.25)
+                
+        .main
+            &__search
+                display: none
+            &__slider
+                border-radius: 1.425rem
+                overflow: hidden
+                width: 100%
+                height: calc(85rem / 4.4)
+            &__slider-image
+                max-width: 100%
+            &__dots
+                display: none
+            &__promotions
+                padding-top: 5rem
+            &__news
+                padding-top: 5rem
+            &__advice-text
+                text-align: center
+                justify-content: space-between
+                padding: 3rem 0rem
+            &__advice-title
+                font-size: 2rem
+            &__advice-subtitle
+                font-size: 1.2rem
+            &__advice-btn
+                padding: 1rem 8rem
+            &__advice-image
+                display: none
+            &__blog
+                padding-top: 5rem
+            &__action
+                display: none
+            &__brand-image
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                gap: 5rem
+            &__brand-image-item
+                width: 32rem
+            &__feature-row
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+            &__feature
+                padding-top: 5rem
+            &__feature-title
+                align-items: start
+                min-height: calc(85rem / 15)
+            &__feature-luck
+                font-size: 1.2rem
+                font-weight: 600
+                color: $secondary-text-color
+            &__subscribe-image
+                display: none
+            &__subscribe
+                height: 15rem
+            &__subscribe-text
+                padding: 3rem 0rem
+            &__subscribe-title
+                text-align: center
+                font-size: 2rem
+            &__subscribe-input
+                width: 100%
+            &__subscribe-btn
+                padding: 1rem 3rem
+            &__blog-row
+                flex-direction: column
+                gap: 2rem
+            &__blog-card
+                width: 100%
+            &__brand
+                padding-top: 5rem
+
+
+        .title
+            justify-content: space-between
+            &__text
+                font-size: 2rem
+            &__more
+                margin-right: 0rem
+                font-size: 1rem
+            &__icon
+                margin-left: 1rem    
+
+
+        .line
+            margin-top: 5rem
+
+
+        .footer
+            &__content
+                display: flex
+                flex-direction: column
+
+
+        .row
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+
