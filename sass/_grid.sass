@@ -847,7 +847,7 @@ body
                 display: flex
                 justify-content: flex-end
                 align-items: center
-                gap: 0.5rem
+                gap: 1rem
             &__search-img
                 height: 2rem
                 width: 2rem
@@ -1003,13 +1003,8 @@ body
                 font-size: 1rem
             &__icon
                 margin-left: 1rem    
-
-
         .line
             margin-top: 8rem
-
-
-        
         .footer
             background: $secondary-color
             padding: 2rem 0rem
@@ -1049,4 +1044,10 @@ body
             flex-wrap: wrap
             align-items: center
             justify-content: center
+
+
+    @media (max-width: 400px)
+        .header
+            &__title
+                display: none
 
