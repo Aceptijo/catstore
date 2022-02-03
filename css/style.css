@@ -640,47 +640,47 @@ body .main__button-item_dog:hover .main__button-list-third {
 
 body .main__button-item_rodent:hover .main__button-list-first {
   top: 33.35%;
-  height: calc(85rem / 2.95);
+  height: calc(85rem / 3.2);
 }
 
 body .main__button-item_rodent:hover .main__button-list-second {
   top: 33.35%;
-  height: calc(85rem / 2.95);
+  height: calc(85rem / 3.2);
 }
 
 body .main__button-item_rodent:hover .main__button-list-third {
   top: 33.35%;
-  height: calc(85rem / 2.95);
+  height: calc(85rem / 3.2);
 }
 
 body .main__button-item_fish:hover .main__button-list-first {
   top: 50%;
-  height: calc(85rem / 4.3);
+  height: calc(85rem / 4.5);
 }
 
 body .main__button-item_fish:hover .main__button-list-second {
   top: 50%;
-  height: calc(85rem / 4.3);
+  height: calc(85rem / 4.5);
 }
 
 body .main__button-item_fish:hover .main__button-list-third {
   top: 50%;
-  height: calc(85rem / 4.3);
+  height: calc(85rem / 4.7);
 }
 
 body .main__button-item_bird:hover .main__button-list-first {
   top: 66.7%;
-  height: calc(85rem / 3.77);
+  height: calc(85rem / 4.05);
 }
 
 body .main__button-item_bird:hover .main__button-list-second {
   top: 66.7%;
-  height: calc(85rem / 3.77);
+  height: calc(85rem / 4.05);
 }
 
 body .main__button-item_bird:hover .main__button-list-third {
   top: 66.7%;
-  height: calc(85rem / 3.77);
+  height: calc(85rem / 4.05);
 }
 
 body .main__button-list-first {
@@ -689,7 +689,7 @@ body .main__button-list-first {
   left: 100%;
   top: 0;
   width: calc(85rem / 3.92);
-  height: calc(85rem / 2.552);
+  height: calc(85rem / 2.76);
   background: #c9d1d9;
   border-radius: 0rem 0rem 0rem 1.425rem;
   overflow: hidden;
@@ -742,7 +742,7 @@ body .main__button-list-second {
   left: 200%;
   top: 0;
   width: calc(85rem / 3.92);
-  height: calc(85rem / 2.552);
+  height: calc(85rem / 2.76);
   background: #c9d1d9;
   overflow: hidden;
 }
@@ -790,7 +790,7 @@ body .main__button-list-third {
   left: 300%;
   top: 0;
   width: calc(85rem / 3.92);
-  height: calc(85rem / 2.552);
+  height: calc(85rem / 2.76);
   border-radius: 0rem 1.425rem 1.425rem 0rem;
   background: #c9d1d9;
   overflow: hidden;
